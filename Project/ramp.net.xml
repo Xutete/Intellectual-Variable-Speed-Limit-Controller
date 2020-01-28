@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 07/22/19 14:09:53 by Eclipse SUMO netedit Version 1.1.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="F:\Project\DQN_VSL_Controller\Project\ramp.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="F:\Project\DQN_VSL_Controller\Project\ramp.net.xml"/>
+    </output>
+
+    <processing>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="false"/>
+    </processing>
+
+    <junctions>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="0"/>
+        <junctions.limit-turn-speed value="-1"/>
+        <rectangular-lane-cut value="false"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="false"/>
+    </pedestrian>
+
+</configuration>
+-->
+
+<net version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="0.00,0.00" convBoundary="-336.73,19.30,2708.36,138.22" origBoundary="-10000000000.00,-10000000000.00,10000000000.00,10000000000.00" projParameter="!"/>
+
+    <edge id=":mainline_start_0" function="internal">
+        <lane id=":mainline_start_0_0" index="0" speed="18.06" length="0.29" shape="2336.33,137.04 2336.00,137.03"/>
+        <lane id=":mainline_start_0_1" index="1" speed="18.06" length="0.29" shape="2336.41,133.84 2336.12,133.83"/>
+        <lane id=":mainline_start_0_2" index="2" speed="18.06" length="0.29" shape="2336.49,130.64 2336.23,130.63"/>
+    </edge>
+    <edge id=":merging_end_0" function="internal">
+        <lane id=":merging_end_0_0" index="0" speed="22.22" length="8.14" shape="9.15,53.79 6.69,53.22 5.19,52.06 3.69,50.87 1.23,50.20"/>
+        <lane id=":merging_end_0_1" index="1" speed="22.22" length="8.14" shape="9.24,50.59 1.23,50.20"/>
+        <lane id=":merging_end_0_2" index="2" speed="22.22" length="8.14" shape="9.33,47.39 1.45,47.01"/>
+        <lane id=":merging_end_0_3" index="3" speed="22.22" length="8.14" shape="9.42,44.19 1.66,43.82"/>
+    </edge>
+    <edge id=":merging_start_0" function="internal">
+        <lane id=":merging_start_0_0" index="0" speed="16.66" length="9.52" shape="141.79,58.55 132.35,57.32"/>
+    </edge>
+    <edge id=":merging_start_1" function="internal">
+        <lane id=":merging_start_1_0" index="0" speed="22.22" length="9.96" shape="142.35,54.80 132.44,54.12"/>
+        <lane id=":merging_start_1_1" index="1" speed="22.22" length="9.96" shape="142.47,51.61 132.54,50.92"/>
+        <lane id=":merging_start_1_2" index="2" speed="22.22" length="9.96" shape="142.59,48.41 132.63,47.72"/>
+    </edge>
+    <edge id=":ramp_start_0" function="internal">
+        <lane id=":ramp_start_0_0" index="0" speed="12.50" length="0.30" shape="1324.06,104.26 1323.76,104.25"/>
+    </edge>
+
+    <edge id="mainline_down" from="merging_end" to="mainline_end" priority="5">
+        <lane id="mainline_down_0" index="0" speed="22.22" length="339.28" shape="1.23,50.20 -337.27,27.28"/>
+        <lane id="mainline_down_1" index="1" speed="22.22" length="339.28" shape="1.45,47.01 -337.05,24.09"/>
+        <lane id="mainline_down_2" index="2" speed="22.22" length="339.28" shape="1.66,43.82 -336.84,20.90"/>
+    </edge>
+    <edge id="mainline_load" from="mainline_initial" to="mainline_start" priority="1">
+        <lane id="mainline_load_0" index="0" speed="13.89" length="371.95" shape="2708.16,146.22 2336.33,137.04"/>
+        <lane id="mainline_load_1" index="1" speed="13.89" length="371.95" shape="2708.24,143.02 2336.41,133.84"/>
+        <lane id="mainline_load_2" index="2" speed="13.89" length="371.95" shape="2708.32,139.82 2336.49,130.64"/>
+    </edge>
+    <edge id="mainline_up" from="mainline_start" to="merging_start" priority="5">
+        <lane id="mainline_up_0" index="0" speed="22.22" length="2195.18" shape="2336.00,137.03 142.35,54.80"/>
+        <lane id="mainline_up_1" index="1" speed="22.22" length="2195.18" shape="2336.12,133.83 142.47,51.61"/>
+        <lane id="mainline_up_2" index="2" speed="22.22" length="2195.18" shape="2336.23,130.63 142.59,48.41"/>
+    </edge>
+    <edge id="merging" from="merging_start" to="merging_end" priority="5">
+        <lane id="merging_0" index="0" speed="22.22" length="123.26" shape="132.35,57.32 9.15,53.79"/>
+        <lane id="merging_1" index="1" speed="22.22" length="123.26" shape="132.44,54.12 9.24,50.59"/>
+        <lane id="merging_2" index="2" speed="22.22" length="123.26" shape="132.54,50.92 9.33,47.39"/>
+        <lane id="merging_3" index="3" speed="22.22" length="123.26" shape="132.63,47.72 9.42,44.19"/>
+    </edge>
+    <edge id="ramp" from="ramp_start" to="merging_start" priority="1" shape="1323.97,102.66 153.76,58.16 140.28,56.79 97.04,45.10">
+        <lane id="ramp_0" index="0" speed="11.11" length="1182.87" shape="1323.76,104.25 153.65,59.76 141.79,58.55"/>
+    </edge>
+    <edge id="ramp_load" from="ramp_initial" to="ramp_start" priority="1">
+        <lane id="ramp_load_0" index="0" speed="13.89" length="257.80" shape="1581.67,114.21 1324.06,104.26"/>
+    </edge>
+
+    <tlLogic id="merging_start" type="static" programID="0" offset="0">
+        <phase duration="60" state="GGGG"/>
+    </tlLogic>
+
+    <junction id="mainline_end" type="dead_end" x="-336.73" y="19.30" incLanes="mainline_down_0 mainline_down_1 mainline_down_2" intLanes="" shape="-337.38,28.88 -336.73,19.30"/>
+    <junction id="mainline_initial" type="dead_end" x="2708.36" y="138.22" incLanes="" intLanes="" shape="2708.36,138.22 2708.12,147.82"/>
+    <junction id="mainline_start" type="priority" x="2336.41" y="129.04" incLanes="mainline_load_0 mainline_load_1 mainline_load_2" intLanes=":mainline_start_0_0 :mainline_start_0_1 :mainline_start_0_2" shape="2336.29,138.64 2336.53,129.04 2336.29,129.04 2335.94,138.63">
+        <request index="0" response="000" foes="000" cont="0"/>
+        <request index="1" response="000" foes="000" cont="0"/>
+        <request index="2" response="000" foes="000" cont="0"/>
+    </junction>
+    <junction id="merging_end" type="priority" x="5.60" y="42.48" incLanes="merging_0 merging_1 merging_2 merging_3" intLanes=":merging_end_0_0 :merging_end_0_1 :merging_end_0_2 :merging_end_0_3" shape="9.10,55.39 9.47,42.59 1.77,42.22 1.12,51.80">
+        <request index="0" response="0010" foes="0010" cont="0"/>
+        <request index="1" response="0000" foes="0001" cont="0"/>
+        <request index="2" response="0000" foes="0000" cont="0"/>
+        <request index="3" response="0000" foes="0000" cont="0"/>
+    </junction>
+    <junction id="merging_start" type="traffic_light" x="97.04" y="45.10" incLanes="ramp_0 mainline_up_0 mainline_up_1 mainline_up_2" intLanes=":merging_start_0_0 :merging_start_1_0 :merging_start_1_1 :merging_start_1_2" shape="141.37,60.12 142.21,56.99 142.29,56.40 142.65,46.81 132.67,46.12 132.31,58.92">
+        <request index="0" response="0000" foes="0000" cont="0"/>
+        <request index="1" response="0000" foes="0000" cont="0"/>
+        <request index="2" response="0000" foes="0000" cont="0"/>
+        <request index="3" response="0000" foes="0000" cont="0"/>
+    </junction>
+    <junction id="ramp_initial" type="dead_end" x="1581.73" y="112.61" incLanes="" intLanes="" shape="1581.73,112.61 1581.61,115.81"/>
+    <junction id="ramp_start" type="priority" x="1323.97" y="102.66" incLanes="ramp_load_0" intLanes=":ramp_start_0_0" shape="1324.00,105.86 1324.12,102.67 1323.82,102.65 1323.70,105.85">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+
+    <connection from="mainline_load" to="mainline_up" fromLane="0" toLane="0" via=":mainline_start_0_0" dir="s" state="M"/>
+    <connection from="mainline_load" to="mainline_up" fromLane="1" toLane="1" via=":mainline_start_0_1" dir="s" state="M"/>
+    <connection from="mainline_load" to="mainline_up" fromLane="2" toLane="2" via=":mainline_start_0_2" dir="s" state="M"/>
+    <connection from="mainline_up" to="merging" fromLane="0" toLane="1" via=":merging_start_1_0" tl="merging_start" linkIndex="1" dir="s" state="O"/>
+    <connection from="mainline_up" to="merging" fromLane="1" toLane="2" via=":merging_start_1_1" tl="merging_start" linkIndex="2" dir="s" state="O"/>
+    <connection from="mainline_up" to="merging" fromLane="2" toLane="3" via=":merging_start_1_2" tl="merging_start" linkIndex="3" dir="s" state="O"/>
+    <connection from="merging" to="mainline_down" fromLane="0" toLane="0" via=":merging_end_0_0" dir="s" state="m"/>
+    <connection from="merging" to="mainline_down" fromLane="1" toLane="0" pass="1" via=":merging_end_0_1" dir="s" state="M"/>
+    <connection from="merging" to="mainline_down" fromLane="2" toLane="1" via=":merging_end_0_2" dir="s" state="M"/>
+    <connection from="merging" to="mainline_down" fromLane="3" toLane="2" via=":merging_end_0_3" dir="s" state="M"/>
+    <connection from="ramp" to="merging" fromLane="0" toLane="0" via=":merging_start_0_0" tl="merging_start" linkIndex="0" dir="s" state="O"/>
+    <connection from="ramp_load" to="ramp" fromLane="0" toLane="0" via=":ramp_start_0_0" dir="s" state="M"/>
+
+    <connection from=":mainline_start_0" to="mainline_up" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":mainline_start_0" to="mainline_up" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":mainline_start_0" to="mainline_up" fromLane="2" toLane="2" dir="s" state="M"/>
+    <connection from=":merging_end_0" to="mainline_down" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":merging_end_0" to="mainline_down" fromLane="1" toLane="0" dir="s" state="M"/>
+    <connection from=":merging_end_0" to="mainline_down" fromLane="2" toLane="1" dir="s" state="M"/>
+    <connection from=":merging_end_0" to="mainline_down" fromLane="3" toLane="2" dir="s" state="M"/>
+    <connection from=":merging_start_0" to="merging" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":merging_start_1" to="merging" fromLane="0" toLane="1" dir="s" state="M"/>
+    <connection from=":merging_start_1" to="merging" fromLane="1" toLane="2" dir="s" state="M"/>
+    <connection from=":merging_start_1" to="merging" fromLane="2" toLane="3" dir="s" state="M"/>
+    <connection from=":ramp_start_0" to="ramp" fromLane="0" toLane="0" dir="s" state="M"/>
+
+</net>

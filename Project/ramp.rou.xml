@@ -1,0 +1,46 @@
+<routes>
+    <vTypeDistribution id="typedist1">
+        <vType id="car0" color="76,114,176" probability="0.15" accel="1.5" decel="4.5" length="5" maxSpeed="22.22" tau="1.5" minGap="2.0" lcStrategic="20" lcSpeedGain="200" lcCooperative="0.5" lcImpatience="1" lcKeepRight="0.1" lcAssertive="2" speedFactor="normc(1,0.1,0.2,2)"/>
+        <vType id="car1" color="85,168,104" probability="0.25" accel="1.5" decel="4.5" length="5" maxSpeed="22.22" tau="1.5" minGap="2.0" lcStrategic="20" lcSpeedGain="200" lcCooperative="0.5" lcImpatience="1" lcKeepRight="0.1" lcAssertive="2" speedFactor="normc(1,0.1,0.2,2)"/>
+        <vType id="car2" color="196,78,82" probability="0.3" accel="1.5" decel="4.5" length="5" maxSpeed="22.22" tau="1.5" minGap="2.0" lcStrategic="20" lcSpeedGain="200" lcCooperative="0.5" lcImpatience="1" lcKeepRight="0.1" lcAssertive="2" speedFactor="normc(1,0.1,0.2,2)"/>
+        <vType id="car3" color="129,114,178" probability="0.1" accel="1.5" decel="4.5" length="5" maxSpeed="22.22" tau="1.5" minGap="2.0" lcStrategic="20" lcSpeedGain="200" lcCooperative="0.5" lcImpatience="1" lcKeepRight="0.1" lcAssertive="2" speedFactor="normc(1,0.1,0.2,2)"/>
+        <vType id="car4" color="100,181,205" probability="0.2" accel="1.5" decel="4.5" length="5" maxSpeed="22.22" tau="1.5" minGap="2.0" lcStrategic="20" lcSpeedGain="200" lcCooperative="0.5" lcImpatience="1" lcKeepRight="0.1" lcAssertive="2" speedFactor="normc(1,0.1,0.2,2)"/>    
+    </vTypeDistribution>
+
+    <route id="from_ramp" edges="ramp_load ramp merging mainline_down"/>
+    <route id="from_mainline" edges="mainline_load mainline_up merging mainline_down"/>
+
+    <flow begin="0"    end="300"  departPos="0" id="volume_from_ramp_1" departSpeed="random" vehsPerHour="353"  route="from_ramp" type="typedist1"/>
+    <flow begin="0"    end="300"  departPos="random" departLane="random" departSpeed="max" id="volume_from_mainline_1" vehsPerHour="4725"  route="from_mainline" type="typedist1"/>
+
+    <flow begin="300"    end="1200"  departPos="0" id="volume_from_ramp_2" departSpeed="random" vehsPerHour="385"  route="from_ramp" type="typedist1"/>
+    <flow begin="300"    end="1200"  departPos="random" departLane="random" departSpeed="max" id="volume_from_mainline_2" vehsPerHour="4800"  route="from_mainline" type="typedist1"/>
+
+    <flow begin="1200"    end="2100"  departPos="0" id="volume_from_ramp_3" departSpeed="random" vehsPerHour="452"  route="from_ramp" type="typedist1"/>
+    <flow begin="1200"    end="2100"  departPos="random" departLane="random" departSpeed="max" id="volume_from_mainline_3" vehsPerHour="4917"  route="from_mainline" type="typedist1"/>
+
+    <flow begin="2100"    end="3000"  departPos="0" id="volume_from_ramp_4" departSpeed="random" vehsPerHour="521"  route="from_ramp" type="typedist1"/>
+    <flow begin="2100"    end="3000"  departPos="random" departLane="random" departSpeed="max" id="volume_from_mainline_4" vehsPerHour="5260"  route="from_mainline" type="typedist1"/>
+
+    <flow begin="3000" end="3900"  departPos="0" id="volume_from_ramp_5" departSpeed="random" vehsPerHour="585"  route="from_ramp" type="typedist1"/>
+    <flow begin="3000" end="3900"  departPos="random" departLane="random" departSpeed="max" id="volume_from_mainline_5" vehsPerHour="5780"  route="from_mainline" type="typedist1"/>
+
+    <flow begin="3900" end="4800"  departPos="0" id="volume_from_ramp_6" departSpeed="random" vehsPerHour="623" route="from_ramp" type="typedist1"/>
+    <flow begin="3900" end="4800"  departPos="random" departLane="random" departSpeed="max" id="volume_from_mainline_6" vehsPerHour="6017"  route="from_mainline" type="typedist1"/>
+
+    <flow begin="4800"    end="5700"  departPos="0" id="volume_from_ramp_7" departSpeed="random" vehsPerHour="574"  route="from_ramp" type="typedist1"/>
+    <flow begin="4800"    end="5700"  departPos="random" departLane="random" departSpeed="max" id="volume_from_mainline_7" vehsPerHour="5870"  route="from_mainline" type="typedist1"/>
+
+    <flow begin="5700"    end="6600"  departPos="0" id="volume_from_ramp_8" departSpeed="random" vehsPerHour="527"  route="from_ramp" type="typedist1"/>
+    <flow begin="5700"    end="6600"  departPos="random" departLane="random" departSpeed="max" id="volume_from_mainline_8" vehsPerHour="5430"  route="from_mainline" type="typedist1"/>
+
+    <flow begin="6600"    end="7500"  departPos="0" id="volume_from_ramp_9" departSpeed="random" vehsPerHour="480"  route="from_ramp" type="typedist1"/>
+    <flow begin="6600"    end="7500"  departPos="random" departLane="random" departSpeed="max" id="volume_from_mainline_9" vehsPerHour="4850"  route="from_mainline" type="typedist1"/>
+
+    <flow begin="7500"    end="8400"  departPos="0" id="volume_from_ramp_10" departSpeed="random" vehsPerHour="443"  route="from_ramp" type="typedist1"/>
+    <flow begin="7500"    end="8400"  departPos="random" departLane="random" departSpeed="max" id="volume_from_mainline_10" vehsPerHour="4723"  route="from_mainline" type="typedist1"/>
+
+    <flow begin="8400"    end="9300"  departPos="0" id="volume_from_ramp_11" departSpeed="random" vehsPerHour="425"  route="from_ramp" type="typedist1"/>
+    <flow begin="8400"    end="9300"  departPos="random" departLane="random" departSpeed="max" id="volume_from_mainline_11" vehsPerHour="4670"  route="from_mainline" type="typedist1"/>
+
+</routes>
