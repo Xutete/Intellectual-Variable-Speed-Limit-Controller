@@ -91,7 +91,8 @@ def Train(cuda, name='3DQN', path=None, frameskip=15):
     
     #Networ initialization
     net = DuelingNetwork(state_size, action_size).to(device)
-    assert next(net.parameters()).is_cuda, "CUDA ERROR!"    
+    if cuda:
+        assert next(net.parameters()).is_cuda, "CUDA ERROR!"
     #print("Observation space: {}, Action size:{}".format(state_size, action_size))
     #Load previously trained network
     if os.path.isfile(path_net):
